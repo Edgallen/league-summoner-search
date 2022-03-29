@@ -1,0 +1,208 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+
+  /*========== Colors ==========*/
+  --title-color: #FFFFFF;
+  --background-color: #000272;
+  --background-alt-color: #FF6363;
+
+  /* winrate colors */
+  --positive-winrate-color: #16FF57;
+  --negative-winrate-color: #FF1624;
+
+  /* devision colors */
+  --gold-division-color: #F8BD26;
+
+  /*========== Font and typography ==========*/
+  --font-family: 'Montserrat', sans-serif;
+  --biggest-font-size: 3rem;
+  --bigger-font-size: 2.5rem;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.7rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --text-line-height: 2rem;
+
+  /*========== Font weight ==========*/
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /*========== Margenes ==========*/
+  --m-0-5: .5rem;
+  --m-0-75: .75rem;
+  --m-1: 1rem;
+  --m-1-5: 1.5rem;
+  --m-2: 2rem;
+  --m-2-5: 2.5rem;
+  --m-3: 3rem;
+  --m-3-5: 3.5rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+:where(h1, h2, h3) {
+  color: var(--title-color);
+  letter-spacing: 0.08rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+span {
+  margin: 0;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.button {
+  width: 83px;
+  font-family: var(--font-family);
+  font-size: var(--small-font-size);
+  border-radius: 0 1.2rem 1.2rem 0;
+  background-color: var(--background-alt-color);
+  color: var(--title-color);
+  -webkit-tap-highlight-color: transparent;
+  border: 2px solid var(--background-alt-color);
+  transition: .4s;
+}
+
+.button:hover {
+  color: var(--background-alt-color);
+  background-color: var(--title-color);
+  font-weight: var(--font-bold);
+}
+
+/*=============== LAYOUT ===============*/
+.grid {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+/*=============== SEARCH FORM ===============*/
+.search {
+  margin-top: var(--m-3-5);
+  gap: var(--m-2-5);
+}
+
+.search__title {
+  font-size: var(--h2-font-size);
+}
+
+.search__form {
+  display: flex;
+  justify-content: center;
+  height: var(--m-2-5);
+}
+
+.search__textfield {
+  width: 220px;
+  border-radius: 1.2rem 0 0 1.2rem;
+  border: 2px solid var(--background-alt-color);
+  font-family: var(--font-family);
+  padding: var(--m-0-5) 0 var(--m-0-5) var(--m-1);
+}
+
+.search__textfield::placeholder {
+  color: var(--background-alt-color);
+}
+
+/*=============== SEARCH RESULT ===============*/
+.search__result {
+  display: flex;
+  gap: var(--m-1);
+  padding: var(--m-1);
+  border: 2px solid var(--background-alt-color);
+  border-radius: var(--m-1);
+  width: 359px;
+}
+
+.search__icon {
+  width: 130px;
+  height: 130px;
+}
+
+.search__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--m-0-75);
+}
+
+.search__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: var(--font-regular);
+  color: #FFFFFF;
+  letter-spacing: 0.06rem;
+}
+
+.search__stats-winrate {
+  color: var(--positive-winrate-color);
+}
+
+.search__stats-devision {
+  color: var(--gold-division-color);
+}
+
+.search__link {
+  color: var(--background-alt-color);
+  transition: 0.4s;
+}
+
+.search__link:hover {
+  color: var(--title-color);
+}
+
+/* Active states */
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
