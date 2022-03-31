@@ -14,7 +14,15 @@
   --negative-winrate-color: #FF1624;
 
   /* devision colors */
+  --challenger-division-color: #FFDA7A;
+  --grandmaster-division-color: #FF6363;
+  --master-division-color: #BE55FF;
+  --diamond-division-color: #86D3FF;
+  --platinum-division-color: #23D46A;
   --gold-division-color: #F8BD26;
+  --silver-division-color: #AFE7FF;
+  --bronze-division-color: #DC9833;
+  --iron-division-color: #828282;
 
   /*========== Font and typography ==========*/
   --font-family: 'Montserrat', sans-serif;
@@ -156,7 +164,7 @@ span {
 .search__result {
   display: flex;
   gap: var(--m-1);
-  padding: var(--m-1);
+  padding: var(--m-0-75);
   border: 2px solid var(--background-alt-color);
   border-radius: var(--m-1);
   width: 359px;
@@ -182,14 +190,6 @@ span {
   letter-spacing: 0.06rem;
 }
 
-.search__stats-winrate {
-  color: var(--positive-winrate-color);
-}
-
-.search__stats-devision {
-  color: var(--gold-division-color);
-}
-
 .search__link {
   color: var(--background-alt-color);
   transition: 0.4s;
@@ -200,6 +200,51 @@ span {
 }
 
 /* Active states */
+.positive-winrate {
+  color: var(--positive-winrate-color);
+}
+
+.negative-winrate {
+  color: var(--negative-winrate-color);
+}
+
+.CHALLENGER {
+  color: var(--challenger-division-color);
+}
+
+.GRANDMASTER {
+  color: var(--grandmaster-division-color)
+}
+
+.MASTER {
+  color: var(--master-division-color);
+}
+
+.DIAMOND {
+  color: var(--diamond-division-color);
+}
+
+.PLATINUM {
+  color: var(--platinum-division-color);
+}
+
+.GOLD {
+  color: var(--gold-division-color);
+}
+
+.SILVER {
+  color: var(--silver-division-color);
+}
+
+.BRONZE {
+  color: var(--bronze-division-color);
+}
+
+.IRON {
+  color: var(--iron-division-color);
+}
+
+/* Preload animation block */
 .preload * {
   -webkit-transition: none !important;
   -moz-transition: none !important;
